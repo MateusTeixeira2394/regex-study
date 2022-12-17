@@ -14,7 +14,7 @@ Syntax:
 ```
 Ex:
 
-<p>Mateus<span style="background-color:#2497CD">123</span></p>
+![Picture 1.1](/images/picture11.jpg)
 
 ### 1.2 Find any word
 
@@ -27,7 +27,8 @@ Syntax:
 ```
 
 Ex:
-<p><span style="background-color:#2497CD">Mateus</span>123</p>
+
+![Picture 1.2](/images/picture12.jpg)
 
 ### 1.3 Find any white space
 
@@ -41,7 +42,7 @@ Syntax:
 
 Ex:
 
-Mateus<span style="background-color:#2497CD"> </span>is<span style="background-color:#2497CD"> </span>cool!
+![Picture 1.3](/images/picture13.jpg)
 
 ### 1.4 Any character
 This class is for finding any character even a special one.
@@ -53,7 +54,7 @@ Syntax:
 
 Ex:
 
-<span style="background-color:#2497CD">Mateus is cool!</span>
+![Picture 1.4](/images/picture14.jpg)
 
 ### 1.5 Custom a class
 
@@ -65,7 +66,8 @@ Syntax:
 ```
 
 Ex:
-Mateu<span style="background-color:#2497CD">s</span> i<span style="background-color:#2497CD">s</span> c<span style="background-color:#2497CD">oo</span>l<span style="background-color:#2497CD">!</span>
+
+![Picture 1.5](/images/picture15.jpg)
 
 ### 1.6 Summary:
 
