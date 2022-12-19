@@ -13,6 +13,10 @@ Syntax:
 ```
 Ex:
 
+```
+\d
+```
+
 ![Picture 1.1](/images/picture11.jpg)
 
 ### 1.2. Find any word
@@ -26,6 +30,10 @@ Syntax:
 
 Ex:
 
+```
+\w
+```
+
 ![Picture 1.2](/images/picture12.jpg)
 
 ### 1.3. Find any white space
@@ -38,6 +46,10 @@ Syntax:
 ```
 
 Ex:
+
+```
+\s
+```
 
 ![Picture 1.3](/images/picture13.jpg)
 
@@ -59,10 +71,14 @@ You can inform which elements you want to find, classifying it like this:
 
 Syntax:
 ```
-[so!]
+[abc123...]
 ```
 
 Ex:
+
+```
+[so!]
+```
 
 ![Picture 1.5](/images/picture15.jpg)
 
@@ -161,5 +177,67 @@ Mateus\s? or Mateus\s{0,1}
 * - zero or more times
 ```
 
+## 3. Anchors
 
+### 3.1. Word Boundary
 
+To inform the word limits. On the other hand, it informs where the word begins and ends.
+
+Syntax:
+
+```
+\b
+```
+
+Ex:
+
+```
+\b\w{2}\b
+```
+
+![Picture 3.1](/images/picture31.jpg)
+
+### 3.2. Anchor of begin and end
+
+To inform how the sentence have to begin and end. Besides that, no other character have to be before or after the finding sentence.
+
+Syntax:
+
+```
+^Some sentence$
+```
+
+Ex:
+
+```
+^M.*!$
+```
+
+![Picture 3.2](/images/picture32.jpg)
+
+### 3.3. Non Word Boundary
+
+in opposite to word-boundary, this class inform if the character have to be followed by another character or not.
+
+Syntax:
+
+```
+\Bchar\B
+```
+
+Ex:
+
+```
+\Bs\B
+```
+
+![Picture 3.3](/images/picture33.jpg)
+
+### 3.4. Summary of anchors
+
+```
+\b - word boundary
+\B - non word boundary
+^ - begin of the target
+$ - end of the target
+```
