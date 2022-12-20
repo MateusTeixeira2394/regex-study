@@ -241,3 +241,43 @@ Ex:
 ^ - begin of the target
 $ - end of the target
 ```
+
+## 4. Groups
+
+You can split your regex code in groups to separate logic function, turning it more understandable when the regex code is too long, making it more flexible to add or remove code blocks and avoid repetitions, due to you can reuse any group.
+
+### 4.1. Group syntax
+
+Just put a piece of code between "(" and ")" to make a group. Thus, this piece of code become independent. 
+
+Syntax:
+
+```
+(part of code)(another part of code)
+```
+
+Ex:
+
+```
+(\(\d{2}\)\s?)(\d{4,5}-?)(\d{4})
+```
+This regex code is used to get telephone number. So:
+
+- The first group is a logic to get the local code that is a two digits between "()";
+- The second group is a logic to get the first part of the telephone;
+- The third one is a logic to get the second part of the telephone;
+
+
+![Picture 4.1](/images/picture41.jpg)
+
+
+### 4.1 Optional groups
+
+You can select any piece of code and put it into a group. Besides that, you can use any quantifier expression on it. Thus, we use the expression "?" to turn this piece of code optional.
+
+Ex:
+
+```
+([123]\d\s?)(de\s)?([a-z]{4,10}\s?)(de\s)?([12]\d{3})
+([0123]\d)\s+(de\s+)?([a-zç]{4,10})\s+(de\s+)?([12]\d{3})
+```
