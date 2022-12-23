@@ -82,7 +82,25 @@ Ex:
 
 ![Picture 1.5](/images/picture15.jpg)
 
-### 1.6 Summary of classes
+### 1.6. Denial
+
+You can create a class with each characters that must not be found. In a few words, you can deny any character, including the expression "_^_" before the characters. like this:
+
+Syntax:
+
+```
+[^any char]
+```
+
+Ex:
+
+```
+[^Z\d]
+```
+
+![Picture 1.6](/images/picture16.jpg)
+
+### 1.7 Summary of classes
 
 ```
 [A-Z] - letter from A to Z
@@ -90,6 +108,7 @@ Ex:
 \d - all digits [0-9]
 \s - whitespace [\t\r\n\f]
 \w - wordchar [A-Za-z0-9_]
+[^] - deny
 ```
 
 ## 2. Quantifiers
