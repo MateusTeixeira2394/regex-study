@@ -278,6 +278,56 @@ You can select any piece of code and put it into a group. Besides that, you can 
 Ex:
 
 ```
-([123]\d\s?)(de\s)?([a-z]{4,10}\s?)(de\s)?([12]\d{3})
 ([0123]\d)\s+(de\s+)?([a-zç]{4,10})\s+(de\s+)?([12]\d{3})
 ```
+
+notice that the sentence part "de" with space is optional.
+
+![Picture 4.2](/images/picture42.jpg)
+
+### 4.2 Backreference
+
+To avoid repetition you can reuse the same group, using the syntax \1, for instance, in which the number after the "\" represents the sequence of the group that will be reused. You can see more in the example below.
+
+Syntax:
+
+```
+
+(group1) some text (group2) more some text (group3)
+\number of the sequence of the group
+
+```
+
+Ex:
+
+```
+<(h1|h3).+?>.*<\/\1>
+```
+
+![Picture 4.3](/images/picture43.jpg)
+
+Notice that instead of use the group (<h1|h3>) one more time, you can just use the syntax \1 to inform that the group 1 will be used again.
+
+## 5. Greedy Expressions
+
+The regex is a greedy partern that means it will get more characters as possible until find the some stop character.
+
+Ex:
+
+```
+<h1.+>
+```
+
+![Picture 5.1](/images/picture5.jpg)
+
+When use the expression "_<h1.+>_" the regex selected all the sentence until the last "_>_" because he is greedy by default. 
+
+So, to inform to regex that he must stop to the first stop character, you have to use the syntax "_?_" before the stop character, like the example bellow:
+
+Ex:
+
+```
+<h1.+?>
+```
+
+![Picture 5.2](/images/picture52.jpg)
